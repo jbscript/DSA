@@ -25,8 +25,8 @@ from math import sqrt
 
 n = 25
 factors = []
-for i in range(1, int(sqrt(n))):
+for i in range(1, int(sqrt(n)) + 1):
     if n % i == 0:
         factors.append(i)
 factors.append(n)  # adding the number itself
-print(factors)
+print(factors.sort())
