@@ -15,9 +15,11 @@
 ## Common Space Complexities
 
 ### O(1) - Constant Space
+
 Algorithm uses a fixed amount of extra space regardless of input size.
 
 **Example:**
+
 ```python
 def find_max(arr):
     max_val = arr[0]  # Only one extra variable
@@ -28,9 +30,11 @@ def find_max(arr):
 ```
 
 ### O(n) - Linear Space
+
 Space usage grows proportionally with input size.
 
 **Example - Array Creation:**
+
 ```python
 def reverse_array(arr):
     reversed_arr = []  # New array of size n
@@ -40,6 +44,7 @@ def reverse_array(arr):
 ```
 
 **Example - Recursion:**
+
 ```python
 def factorial(n):
     if n <= 1:
@@ -48,9 +53,11 @@ def factorial(n):
 ```
 
 ### O(n²) - Quadratic Space
+
 Space usage grows quadratically with input size.
 
 **Example:**
+
 ```python
 def create_matrix(n):
     matrix = []
@@ -61,14 +68,16 @@ def create_matrix(n):
 ```
 
 ### O(log n) - Logarithmic Space
+
 Space usage grows logarithmically with input size.
 
 **Example - Binary Search (Recursive):**
+
 ```python
 def binary_search(arr, target, left, right):
     if left > right:
         return -1
-    
+
     mid = (left + right) // 2
     if arr[mid] == target:
         return mid
@@ -87,9 +96,9 @@ def binary_search(arr, target, left, right):
 
 ## Space vs Time Complexity
 
-| Algorithm | Time Complexity | Space Complexity | Trade-off |
-|-----------|----------------|------------------|-----------|
-| Bubble Sort | O(n²) | O(1) | Time for Space |
-| Merge Sort | O(n log n) | O(n) | Space for Time |
-| Quick Sort | O(n log n) avg | O(log n) avg | Balanced |
-| Hash Table | O(1) avg | O(n) | Space for Time |
+| Algorithm   | Time Complexity | Space Complexity | Trade-off      |
+| ----------- | --------------- | ---------------- | -------------- |
+| Bubble Sort | O(n²)           | O(1)             | Time for Space |
+| Merge Sort  | O(n log n)      | O(n)             | Space for Time |
+| Quick Sort  | O(n log n) avg  | O(log n) avg     | Balanced       |
+| Hash Table  | O(1) avg        | O(n)             | Space for Time |
