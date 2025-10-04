@@ -24,19 +24,16 @@
 
 
 def maxProductOptimal(nums: list[int]) -> int:
+    max_product = nums[0]
     prefix = 1
-    postfix = 1
-    max_prodcut = nums[0]
+    suffix = 1
     for i in range(len(nums)):
-        if prefix == 0:
-            prefix = 1
-        if postfix == 0:
-            postfix = 1
+        prefix = prefix or 1
+        suffix = suffix or 1
         prefix *= nums[i]
-        postfix *= nums[len(nums) - i - 1]
-        local_max = max(prefix, postfix)
-        max_prodcut = max(max_prodcut, local_max)
-    return max_prodcut
+        suffix *= nums[len(nums) - 1 - i]
+        max_product = max(prefix, suffix, max_product)
+    return max_product
 
 
 response = maxProductOptimal([0, 2, 3, -2, 4])
