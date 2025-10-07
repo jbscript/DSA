@@ -14,10 +14,6 @@
 # 3. 2 steps + 1 step
 
 
-def climbStairs(n: int) -> int:
-    print()
-
-
 def climbStairsRecursive(n: int, memo={}) -> int:
     if n in memo:  # check cache
         return memo[n]
@@ -29,6 +25,14 @@ def climbStairsRecursive(n: int, memo={}) -> int:
     # Recursive call with memoization
     memo[n] = climbStairs(n - 1, memo) + climbStairs(n - 2, memo)
     return memo[n]
+
+
+# True DP
+def climbStairs(n: int) -> int:
+    a, b = 1, 1
+    for _ in range(n - 1):
+        a, b = b, a + b
+    return b
 
 
 response = climbStairs(2)
