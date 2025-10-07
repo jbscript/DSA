@@ -51,9 +51,9 @@ def fib_optimal(n: int) -> int:
 import datetime
 
 start = datetime.datetime.now()
-# print(fib(40))
-# print(fib_dp(500))
-print(fib_optimal(15000))
+# print(fib(5))
+# print(fib_dp(5))
+print(fib_optimal(4))
 
 end = datetime.datetime.now()
 print(end - start)
